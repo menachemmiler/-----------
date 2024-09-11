@@ -21,12 +21,11 @@ const filterDoubleNumbers = (arryNumbers) => {
 // console.log(filterDoubleNumbers(myArry));
 
 
-// //פונקציה שמקבלת מחרוזת ומחזירה מחרוזת שבה כל המילים מתחילות באות גדולה, פרט למילים שמסתיימות בנקודה
-// const getStringWithUpercase = (string) => {
-//     const listAll = string.split(" ");
-//     console.log(listAll)
-// } 
-// const myStr = "schcs sdhjcbdsh sdhcv. sdcbd sdcds.";
-// getStringWithUpercase(myStr);
+//פונקציה שמקבלת מחרוזת ומחזירה מחרוזת שבה כל המילים מתחילות באות גדולה, פרט למילים שמסתיימות בנקודה
+const getStringWithUpercase = (string) => {
+    return string.split(" ").map(a => !(a[a.length - 1] == ".") ?  a[0].toUpperCase() + a.slice(1) : a);
+} 
+const myStr = "schcs sdhjcbdsh sdhcv. sdcbd sdcds.";
+console.log(getStringWithUpercase(myStr))
 
 
